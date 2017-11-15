@@ -1,4 +1,5 @@
 import * as React from "react";
+import Child from "./Child";
 
 interface ITaskInputProps {
     onSubmit: () => void;
@@ -18,6 +19,7 @@ class TaskInput extends React.PureComponent<ITaskInputProps, ITaskInputState> {
     public render() {
         return (
             <form onSubmit={this.props.onSubmit}>
+                <Child />
                 <input
                     type="text" value={this.state.text}
                     onChange={this.onChangeHandler}
