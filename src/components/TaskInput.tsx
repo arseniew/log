@@ -16,9 +16,8 @@ class TaskInput extends React.PureComponent<ITaskInputProps, ITaskInputState> {
         };
     }
     public render() {
-        const { onSubmit } = this.props;
         return (
-            <form onSubmit={onSubmit}>
+            <form onSubmit={this.props.onSubmit}>
                 <input
                     type="text" value={this.state.text}
                     onChange={this.onChangeHandler}
